@@ -2,6 +2,7 @@
   "name": "shoppinguru",
   "version": "0.1.0",
   "private": true,
+  "proxy":"http://localhost:30064/",
   "dependencies": {
     "jquery": "^3.3.1",
     "react": "^16.4.1",

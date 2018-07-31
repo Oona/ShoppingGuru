@@ -2,6 +2,8 @@ import React, {Component} from 'react';
 import Tuoteyksikko from './TuoteYksikko';
 import $ from 'jquery';
 
+const apiurl ='/api/ostoslista';
+
 class TuoteList extends Component{
 constructor(){
     super();
@@ -12,7 +14,7 @@ constructor(){
 
 getToDos(){
     $.ajax({
-        url:'http://localhost:30064/api/ostoslista',
+        url: apiurl,
         dataType: 'json',
         cache: false,
         success: function(data){
