@@ -7,10 +7,9 @@ class NavMenu extends Component {
     return (
 
         <div>
-          <Link to="/Oona">Lisää tuotteita</Link>
-          <Link to="/ostosl">Ostoslista</Link>
+          <Link to="/">Lisää tuotteita</Link>
+          <Link to="/ostoslista">Ostoslista</Link>
           <Link to="/kori">Kori</Link>
-          <Link to="/eiole">Error</Link>
          
         </div>
 

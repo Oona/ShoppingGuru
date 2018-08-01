@@ -1,7 +1,11 @@
 import React, {Component} from 'react';
 import Tuoteyksikko from './TuoteYksikko';
 import $ from 'jquery';
+<<<<<<< HEAD
 import TuoteForm from  './TuoteForm';
+=======
+import './TuoteList.css'
+>>>>>>> c32e86baee6f4d163e380e627dc77369bf25279d
 
 const apiurl ='/api/ostoslista';
 
