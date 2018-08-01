@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-class TuoteForm extends Component {
+class Kori extends Component {
   state = { tuote: "" };
   tuoteTallennus = e => {
     this.setState({ tuote: e.target.value });
@@ -16,38 +16,12 @@ class TuoteForm extends Component {
   render() {
     return (
       <div>
-        <form onSubmit={this.laheta}>
-          <table>
-            <tbody>
-              <tr>
-                <td>Tuote:</td>
-                <td>
-                  <input
-                    value={this.state.tuote}
-                    onChange={this.tuoteTallennus}
-                  />
-                </td>
-              </tr>
-              <tr>
-                <td>Määrä:</td>
-                <td>
-                  <input
-                    value={this.state.maara}
-                    onChange={this.maaraTallennus}
-                  />
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <input type="submit" defaultValue="Lisää" />
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </form>
+      <p>
+        Korissa olevat tuotteet.
+        </p>
       </div>
     );
   }
 }
 
-export default TuoteForm;
+export default Kori;

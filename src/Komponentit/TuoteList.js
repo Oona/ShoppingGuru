@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import Tuoteyksikko from './TuoteYksikko';
 import $ from 'jquery';
+import './TuoteList.css'
 
 const apiurl ='/api/ostoslista';
 
