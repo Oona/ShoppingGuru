@@ -2,11 +2,13 @@
   "name": "shoppinguru",
   "version": "0.1.0",
   "private": true,
-  "proxy":"http://localhost:30064/",
+  "proxy": "http://localhost:30064/",
   "dependencies": {
+    "eslint": "^5.2.0",
     "jquery": "^3.3.1",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
+    "react-router-dom": "^4.3.1",
     "react-scripts": "1.1.4"
   },
   "scripts": {
