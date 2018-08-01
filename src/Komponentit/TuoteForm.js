@@ -1,17 +1,17 @@
 import React, { Component } from "react";
 
 class TuoteForm extends Component {
-  state = { tuote: "" };
+  state = { tuotteennimi: "", määrä:0, korissa: false};
   tuoteTallennus = e => {
-    this.setState({ tuote: e.target.value });
+    this.setState({ tuotteennimi: e.target.value });
   };
   maaraTallennus = e => {
-    this.setState({ maara: e.target.value });
+    this.setState({ määrä: e.target.value });
   };
   laheta = e => {
     e.preventDefault();
-    this.props.tallennaTuote(this.state);
-    this.setState({ tuote: "", maara: "" });
+    this.props.saveTuote(this.state);
+    this.setState({ tuotteennimi: "", määrä: "" });
   };
   render() {
     return (
@@ -22,19 +22,13 @@ class TuoteForm extends Component {
               <tr>
                 <td>Tuote:</td>
                 <td>
-                  <input
-                    value={this.state.tuote}
-                    onChange={this.tuoteTallennus}
-                  />
+                  <input value={this.state.tuotteennimi} onChange={this.tuoteTallennus}/>
                 </td>
               </tr>
               <tr>
                 <td>Määrä:</td>
                 <td>
-                  <input
-                    value={this.state.maara}
-                    onChange={this.maaraTallennus}
-                  />
+                  <input value={this.state.määrä} onChange={this.maaraTallennus}/>
                 </td>
               </tr>
               <tr>
