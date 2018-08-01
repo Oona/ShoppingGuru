@@ -7,7 +7,7 @@ class Tuote extends Component{
 
 poista = () => {
     console.log(this.props.todo.ostoid);
-    this.props.poisto(this.props.todo.ostoid);
+    this.props.poista(this.props.todo.ostoid);
 }
 
 render(){

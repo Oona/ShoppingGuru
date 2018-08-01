@@ -74,8 +74,8 @@ deleteTuote = (poistettavanId) => {
 render(){
     return(
         <div className="TuoteList">
-        <Tuoteyksikko todos={this.state.todos}/>
-        <TuoteForm saveTuote ={this.newTuote} poisto ={this.deleteTuote}/>
+        <Tuoteyksikko todos={this.state.todos} poisto={this.deleteTuote}/>
+        <TuoteForm saveTuote ={this.newTuote} />
 
 
         </div>
