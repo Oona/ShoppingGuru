@@ -41,7 +41,7 @@ componentDidMount(){
 render(){
     return(
         <div className="TuoteList">
-        <Tuoteyksikko Tuoteyksikko={this.state.todos}/>
+        <Tuoteyksikko todos={this.state.todos}/>
         </div>
     );
 }

@@ -1,23 +1,22 @@
 import React, {Component} from 'react';
+import Tuote from './Tuote';
 
 class Tuoteyksikko extends Component{
 
 render(){
     let todoItems;
+    console.log(this.props.todos);
     if(this.props.todos){
         todoItems=this.props.todos.map(todo => {
             return(
-                <div>
-                <Tuoteyksikko key={todo.ostoid} todo ={todo}/>
-                </div>
+                <Tuote key={todo.tuotteennimi} todo ={todo}/>
             );
         });
     }
     return(
-        <div className="Tuoteyksikko">
-        <p> Ostoslista </p>
-        <p>{this.props.tuotteennimi}<br/>
-        {this.props.määrä}</p>
+        <div className="TuoteYksikko">
+        <p>Ostoslista</p>
+        {todoItems}
         </div>
     );
 }
