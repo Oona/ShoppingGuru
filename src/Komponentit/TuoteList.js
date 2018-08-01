@@ -75,7 +75,8 @@ render(){
     return(
         <div className="TuoteList">
         <Tuoteyksikko todos={this.state.todos}/>
-        <TuoteForm saveTuote ={this.newTuote}/>
+        <TuoteForm saveTuote ={this.newTuote} poisto ={this.deleteTuote}/>
+
 
         </div>
     );

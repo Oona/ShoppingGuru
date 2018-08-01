@@ -9,9 +9,10 @@ render(){
     if(this.props.todos){
         todoItems=this.props.todos.map(todo => {
             return(
-                <Tuote key={todo.tuotteennimi} todo ={todo}/>
+                <Tuote todo ={todo} poista ={this.props.poisto}  key={todo.tuotteennimi} />
             );
-        });
+        }
+    );
     }
     return(
         <div className="TuoteYksikko">
