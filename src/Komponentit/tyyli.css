@@ -1,0 +1,44 @@
+
+body {
+    font-family: 'Work Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.buttonDelete {
+    display: inline-block;
+ padding: 5px 10px;
+ font-size: 14px;
+ cursor: pointer;
+ text-align: center;
+ text-decoration: none;
+ outline: none;
+ color: #fff;
+ background-color: #e9632d;
+ border: none;
+ border-radius: 15px;
+ box-shadow: 0 3px #999;
+}
+
+.buttonDelete:hover {background-color: #dd110a}
+
+.buttonDelete:active {
+ background-color: #dd110a;
+ box-shadow: 0 5px #666;
+ transform: translateY(4px);
+}
+
+.TuoteList{
+    background-color: #e9632d
+}
+
+.guru{
+   max-height: 15%;
+   max-width: 15%; 
+}
+
+.ShoppingGuru{
+    font-family: 'Indie Flower', cursive;
+font-weight: bold;
+}
