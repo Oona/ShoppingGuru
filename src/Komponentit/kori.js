@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import './tyyli.css';
 
 class Kori extends Component {
   state = { tuote: "" };

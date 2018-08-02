@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import Tuoteyksikko from './TuoteYksikko';
 import $ from 'jquery';
 import TuoteForm from  './TuoteForm';
-import './TuoteList.css'
+import './tyyli.css';
 
 const apiurl ='/api/ostoslista';
 
@@ -75,8 +75,8 @@ deleteTuote = (poistettavanId) => {
 render(){
     return(
         <div className="TuoteList">
-        <Tuoteyksikko todos={this.state.todos} poisto={this.deleteTuote}/>
         <TuoteForm saveTuote ={this.newTuote} />
+        <Tuoteyksikko todos={this.state.todos} poisto={this.deleteTuote}/>
 
 
         </div>

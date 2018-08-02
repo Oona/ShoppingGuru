@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import Tuote from './Tuote';
-//import './TuoteList.css';
-import './TuoteYksikko.css';
+import './tyyli.css';
 
 class Tuoteyksikko extends Component {
 
@@ -18,7 +17,7 @@ class Tuoteyksikko extends Component {
         return (
             <div className="TuoteYksikko">
                 <h1>Ostoslista</h1>
-                <div class="lines"></div>
+                <div className="lines"></div>
                 <ul>
                     {todoItems}</ul>
 

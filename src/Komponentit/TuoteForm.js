@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import './tyyli.css';
 
 class TuoteForm extends Component {
   state = { tuotteennimi: "", määrä:0, korissa: false};

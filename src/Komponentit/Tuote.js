@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import './tyyli.css';
 
 
 class Tuote extends Component{
@@ -13,9 +14,9 @@ poista = () => {
 render(){
     return(
         <li className="Tuote">
-        {this.props.todo.tuotteennimi}<br/>
         {this.props.todo.määrä}
-        <button type="button" onClick={this.poista}>Poista</button>
+        {this.props.todo.tuotteennimi}
+        <button className="buttonDelete" type="button" onClick={this.poista}>Poista</button>
         </li>
     );
 }
