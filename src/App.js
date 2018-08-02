@@ -19,7 +19,7 @@ class App extends Component {
 
 
           <Switch>
-            <Route exact path="/" component={TuoteForm} />
+            <Route exact path="/" component={TuoteList} />
             <Route exact path="/ostoslista" component={TuoteList} />
             <Route exact path="/kori" component={kori} />
 
