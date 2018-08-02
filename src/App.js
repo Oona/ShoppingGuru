@@ -1,12 +1,11 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './Komponentit/tyyli.css';
+import React, { Component } from "react";
+import logo from "./logo.svg";
+import "./Komponentit/tyyli.css";
 import NavMenu from "./Komponentit/NavMenu";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import kori from "./Komponentit/kori";
-import TuoteList from './Komponentit/TuoteList';
-import TuoteForm from './Komponentit/TuoteForm';
-
+import TuoteList from "./Komponentit/TuoteList";
+import TuoteForm from "./Komponentit/TuoteForm";
+import KoriList from "./Komponentit/KoriList";
 
 class App extends Component {
   render() {
@@ -17,14 +16,11 @@ class App extends Component {
             <NavMenu />
           </header>
 
-
           <Switch>
             <Route exact path="/" component={TuoteList} />
             <Route exact path="/ostoslista" component={TuoteList} />
-            <Route exact path="/kori" component={kori} />
-
+            <Route exact path="/kori" component={KoriList} />
           </Switch>
-
         </div>
       </Router>
     );

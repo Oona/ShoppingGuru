@@ -1,87 +1,116 @@
-import React, {Component} from 'react';
-import Tuoteyksikko from './TuoteYksikko';
-import $ from 'jquery';
-import TuoteForm from  './TuoteForm';
-import './tyyli.css';
+import React, { Component } from "react";
+import Tuoteyksikko from "./TuoteYksikko";
+import $ from "jquery";
+import TuoteForm from "./TuoteForm";
+import "./tyyli.css";
 
-const apiurl ='/api/ostoslista';
+const apiurl = "/api/ostoslista";
 
-class TuoteList extends Component{
-constructor(){
+class TuoteList extends Component {
+  constructor() {
     super();
     this.state = {
-        todos:[]
-    }
-}
+      todos: []
+    };
+  }
 
-getToDos(){
+  getToDos() {
     $.ajax({
-        url: apiurl,
-        dataType: 'json',
-        cache: false,
-        success: function(data){
-            this.setState({todos:data}, function(){
-                console.log(this.state);
-
-            });
-        }.bind(this),
-        error: function(xhr, status,err)
-        {
-            console.log(err)
-        }
+      url: apiurl,
+      dataType: "json",
+      cache: false,
+      success: function(data) {
+        this.setState({ todos: data }, function() {
+          console.log(this.state);
+        });
+      }.bind(this),
+      error: function(xhr, status, err) {
+        console.log(err);
+      }
     });
-}
+  }
 
-componentWillMount(){
+  componentWillMount() {
     this.getToDos();
-}
+  }
 
-componentDidMount(){
+  componentDidMount() {
     this.getToDos();
-}
+  }
 
-luoTuote(tuote, callback) {
-    return fetch('/api/ostoslista', {
-        method: 'POST',
-        headers: {'Content-Type': 'application/json'},
-        body: JSON.stringify(tuote)
-    })
-    .then(function(response) {
-        callback(response.status)
+  luoTuote(tuote, callback) {
+    return fetch("/api/ostoslista", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(tuote)
+    }).then(function(response) {
+      callback(response.status);
     });
-}
+  }
 
-poistaTuote(ostoid){
-    return fetch('api/ostoslista/'+ostoid, {
-        method: 'DELETE',
+  poistaTuote(ostoid) {
+    return fetch("api/ostoslista/" + ostoid, {
+      method: "DELETE"
     });
-}
+  }
+  //   päivitäTuote(ostoid) {
+  //     return fetch("api/ostoslista/" + ostoid, {
+  //       method: "PUT"
+  //     });
+  //   }
 
-newTuote = (uusituote) => {
-    this.luoTuote(uusituote, function(){
+  koriTuote(ostoid) {
+    return fetch("api/ostoslista/" + ostoid, {
+      method: "PUT"
+    });
+  }
+
+  newTuote = uusituote => {
+    this.luoTuote(
+      uusituote,
+      function() {
         this.getToDos();
-        }.bind(this));
-}
-
-deleteTuote = (poistettavanId) => {
-    this.poistaTuote(poistettavanId) 
-        .then(function(response) {
-            this.getToDos();
-        }.bind(this));
-    }
-
-
-
-render(){
-    return(
-        <div className="TuoteList">
-        <TuoteForm saveTuote ={this.newTuote} />
-        <Tuoteyksikko todos={this.state.todos} poisto={this.deleteTuote}/>
-
-
-        </div>
+      }.bind(this)
     );
-}
+  };
+
+  deleteTuote = poistettavanId => {
+    this.poistaTuote(poistettavanId).then(
+      function(response) {
+        this.getToDos();
+      }.bind(this)
+    );
+  };
+
+  basketTuote = koritettavanId => {
+    this.koriTuote(koritettavanId).then(
+      function(response) {
+        this.getToDos();
+      }.bind(this)
+    );
+  };
+
+  //   updateTuote = päivitettävänId => {
+  //     this.päivitäTuote(päivitettävänId).then(
+  //       function(response) {
+  //         this.getToDos();
+  //       }.bind(this)
+  //     );
+  //   };
+
+  render() {
+    return (
+      <div className="TuoteList">
+        <TuoteForm saveTuote={this.newTuote} />
+        <Tuoteyksikko
+          todos={this.state.todos}
+          poisto={this.deleteTuote}
+          kori={this.basketTuote}
+          //   update={this.updateTuote}
+        />
+      </div>
+    );
+  }
 }
 
 export default TuoteList;
