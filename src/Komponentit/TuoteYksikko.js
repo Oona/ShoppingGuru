@@ -18,8 +18,8 @@ class Tuoteyksikko extends Component {
             <div className="TuoteYksikko">
                 <h1>Ostoslista</h1>
                 <div className="lines"></div>
-                <ul>
-                    {todoItems}</ul>
+                <table align="center">
+                    {todoItems}</table>
 
             </div>
         );

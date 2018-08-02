@@ -24,7 +24,9 @@ class App extends Component {
             <Route exact path="/kori" component={kori} />
 
           </Switch>
-
+<footer>
+  <p>&nbsp;</p>
+</footer>
         </div>
       </Router>
     );

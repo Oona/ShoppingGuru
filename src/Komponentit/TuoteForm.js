@@ -16,7 +16,7 @@ class TuoteForm extends Component {
   };
   render() {
     return (
-      <div>
+      <div align="center">
         <form onSubmit={this.laheta}>
           <table>
             <tbody>
@@ -33,8 +33,12 @@ class TuoteForm extends Component {
                 </td>
               </tr>
               <tr>
-                <td>
-                  <input type="submit" defaultValue="Lisää" />
+                <td>&nbsp;</td>
+                </tr>
+              <tr>
+                <td></td>
+                <td >
+                  <input className="button" type="submit" defaultValue="Lisää" />
                 </td>
               </tr>
             </tbody>

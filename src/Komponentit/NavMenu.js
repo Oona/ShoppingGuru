@@ -10,10 +10,8 @@ class NavMenu extends Component {
         <div>
           <h1 className="ShoppingGuru">ShoppinGuru</h1>
           <img className="guru" src={guru} alt="guru"/> 
-          <nav className="navbar navbar-default">
+          <nav className="navbar">
           <div className="container-fluid">
-          <div className="navbar-header">
-          </div>
           <ul className="nav navbar-nav">
           <li><a href="/ostoslista">Ostoslista</a></li>
         <li><a href="/kori">Kori</a></li>

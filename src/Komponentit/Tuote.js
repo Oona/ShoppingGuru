@@ -13,11 +13,13 @@ poista = () => {
 
 render(){
     return(
-        <li className="Tuote">
-        {this.props.todo.määrä}
-        {this.props.todo.tuotteennimi}
+        <tr className="Tuote">
+        <td className="boldMäärä">{this.props.todo.määrä}</td>
+        <td>&nbsp;</td>
+        <td>{this.props.todo.tuotteennimi}</td>
+        <td>&nbsp;</td>
         <button className="buttonDelete" type="button" onClick={this.poista}>Poista</button>
-        </li>
+        </tr>
     );
 }
 }
