@@ -1,10 +1,8 @@
 import React, { Component } from "react";
-import logo from "./logo.svg";
 import "./Komponentit/tyyli.css";
 import NavMenu from "./Komponentit/NavMenu";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route} from "react-router-dom";
 import TuoteList from "./Komponentit/TuoteList";
-import TuoteForm from "./Komponentit/TuoteForm";
 import KoriList from "./Komponentit/KoriList";
 
 class App extends Component {
