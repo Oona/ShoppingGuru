@@ -1,24 +1,28 @@
 import React, { Component } from "react";
-import './tyyli.css';
-import guru from './guru.jpg';
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import "./tyyli.css";
+import guru from "./guru.jpg";
 
 class NavMenu extends Component {
   render() {
     return (
-
-        <div>
-          <h1 className="ShoppingGuru">ShoppinGuru</h1>
-          <img className="guru" src={guru} alt="guru"/> 
-          <nav className="navbar">
+      <div>
+        <h1 className="ShoppingGuru">ShoppinGuru</h1>
+        <img className="guru" src={guru} alt="guru" />
+        <nav className="navbar">
           <div className="container-fluid">
-          <ul className="nav navbar-nav">
-          <li><a href="/ostoslista">Ostoslista</a></li>
-        <li><a href="/kori">Kori</a></li>
-        </ul>
-        </div>
+            <div className="navbar-header" />
+            <ul className="nav navbar-nav">
+              <li>
+                <Link to="/ostoslista">Ostoslista</Link>
+              </li>
+              <li>
+                <Link to="/kori">Kori</Link>
+              </li>
+            </ul>
+          </div>
         </nav>
-        </div>
-
+      </div>
     );
   }
 }

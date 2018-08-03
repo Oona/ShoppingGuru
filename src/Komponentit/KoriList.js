@@ -1,7 +1,6 @@
 import React, { Component } from "react";
-import Tuoteyksikko from "./TuoteYksikko";
+import Koriyksikko from "./KoriYksikko";
 import $ from "jquery";
-import TuoteForm from "./TuoteForm";
 import "./tyyli.css";
 
 const apiurl = "/api/ostoslista";
@@ -101,8 +100,8 @@ class TuoteList extends Component {
   render() {
     return (
       <div className="TuoteList">
-        <TuoteForm saveTuote={this.newTuote} />
-        <Tuoteyksikko
+        {/* <TuoteForm saveTuote={this.newTuote} /> */}
+        <Koriyksikko
           todos={this.state.todos}
           poisto={this.deleteTuote}
           kori={this.basketTuote}

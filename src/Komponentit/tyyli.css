@@ -11,7 +11,7 @@ body {
     font-size: 20px;
 }
 
-.buttonDelete {
+.buttonBasket {
     display: inline-block;
  padding: 5px 10px;
  font-size: 14px;
@@ -26,10 +26,33 @@ body {
  box-shadow: 0 3px #999;
 }
 
-.buttonDelete:hover {background-color: #dd110a}
+.buttonBasket:hover {background-color: #dd110a}
+
+.buttonBasket:active {
+ background-color: #dd110a;
+ box-shadow: 0 5px #666;
+ transform: translateY(4px);
+}
+
+.buttonDelete {
+    display: inline-block;
+ padding: 5px 10px;
+ font-size: 14px;
+ cursor: pointer;
+ text-align: center;
+ text-decoration: none;
+ outline: none;
+ color:black;
+ background-color:  rgb(230, 225, 225);
+ border: none;
+ border-radius: 15px;
+ box-shadow: 0 3px #999;
+}
+
+.buttonDelete:hover {background-color: rgb(197, 193, 193)}
 
 .buttonDelete:active {
- background-color: #dd110a;
+ background-color: rgb(197, 193, 193);
  box-shadow: 0 5px #666;
  transform: translateY(4px);
 }
