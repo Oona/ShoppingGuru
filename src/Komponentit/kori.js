@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "./tyyli.css";
+import deleteImg from "./deleteImg.png";
 
 class Kori extends Component {
   poista = () => {
@@ -16,7 +17,7 @@ class Kori extends Component {
         return (
           <div>
           <tr className="Tuote">
-            <button className="buttonDelete" type="button" onClick={this.poista}>Poista</button>
+            <button className="buttonDelete" type="button" onClick={this.poista}><img className="deleteImg" src={deleteImg} alt="deleteImg" /></button>
             <td>&nbsp;</td>
             <td className="boldMäärä">{this.props.todo.määrä}</td>
             <td>&nbsp;</td>

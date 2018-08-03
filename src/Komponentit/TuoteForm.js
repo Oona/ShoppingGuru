@@ -1,8 +1,9 @@
 import React, { Component } from "react";
 import './tyyli.css';
+import addButton from "./addButton.png";
 
 class TuoteForm extends Component {
-  state = { tuotteennimi: "", määrä:0, korissa: false};
+  state = { tuotteennimi: "", määrä:"", korissa: false};
   tuoteTallennus = e => {
     this.setState({ tuotteennimi: e.target.value });
   };
@@ -23,13 +24,13 @@ class TuoteForm extends Component {
               <tr>
                 <td>Tuote:</td>
                 <td>
-                  <input value={this.state.tuotteennimi} onChange={this.tuoteTallennus}/>
+                  <input className="form-control" value={this.state.tuotteennimi} onChange={this.tuoteTallennus}/>
                 </td>
               </tr>
               <tr>
                 <td>Määrä:</td>
                 <td>
-                  <input value={this.state.määrä} onChange={this.maaraTallennus}/>
+                  <input className="form-control" value={this.state.määrä} onChange={this.maaraTallennus}/>
                 </td>
               </tr>
               <tr>
@@ -38,7 +39,7 @@ class TuoteForm extends Component {
               <tr>
                 <td></td>
                 <td >
-                  <input className="button" type="submit" defaultValue="Lisää" />
+                  <input  className="button" type="image" src={addButton} alt="Lisää" />
                 </td>
               </tr>
             </tbody>

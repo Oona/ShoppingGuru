@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import "./tyyli.css";
+import basket from "./basket.png";
+import deleteImg from "./deleteImg.png";
 
 class Tuote extends Component {
   poista = () => {
@@ -16,9 +18,9 @@ class Tuote extends Component {
         return (
          <div>
         <tr className="Tuote">
-            <button className="buttonBasket" type="button" onClick={this.kori}>Koriin</button>
+            <button className="buttonBasket" type="button" onClick={this.kori}><img className="basket" src={basket} alt="basket" /></button>
         <td>&nbsp;</td>
-           <button className="buttonDelete" type="button" onClick={this.poista}>Poista</button>
+           <button className="buttonDelete" type="button" onClick={this.poista}><img className="deleteImg" src={deleteImg} alt="deleteImg" /></button>
            <td>&nbsp;</td>
         <td className="boldMäärä">{this.props.todo.määrä}</td>
         <td>&nbsp;</td>
