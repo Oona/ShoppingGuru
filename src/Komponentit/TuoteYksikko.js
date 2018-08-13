@@ -26,7 +26,7 @@ class Tuoteyksikko extends Component {
     }
     return (
       <div className="TuoteYksikko">
-        <h1>Ostoslista</h1>
+        <h1>Kostolista</h1>
         <tr>
         <td>&nbsp;</td>
         </tr>

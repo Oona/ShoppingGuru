@@ -22,13 +22,13 @@ class TuoteForm extends Component {
           <table>
             <tbody>
               <tr>
-                <td>Tuote:</td>
+                <td>Muutos2:</td>
                 <td>
                   <input className="form-control" value={this.state.tuotteennimi} onChange={this.tuoteTallennus}/>
                 </td>
               </tr>
               <tr>
-                <td>Määrä:</td>
+                <td>Muutos3:</td>
                 <td>
                   <input className="form-control" value={this.state.määrä} onChange={this.maaraTallennus}/>
                 </td>
